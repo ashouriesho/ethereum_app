@@ -1,10 +1,6 @@
-var app = angular.module("ethStats",[]);
-app.controller("ethCtrl", function($http, $scope){
-  //api data 
-	$http.get("https://api.etherscan.io/api?module=stats&action=ethprice&apikey=YourApiKeyToken")
-  .then(function(response) {
-    // price data 
-    $scope.price = response.data;
+var app = angular.module('ethStats', []);
+app.controller('ethCtrl', function($scope, $http) {
+  $http.get("https://min-api.cryptocompare.com/data/price?fsym=ETH&tsyms=USD").then(function (response) {
+      $scope.price = response.data;
   });
-  //add a reload function 
 });

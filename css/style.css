@@ -1,4 +1,8 @@
 /*price class should be properly defined*/
 .price {
-  
+  position: relative;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
